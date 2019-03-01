@@ -21,9 +21,12 @@
     "dev": "node build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --ext .js,.vue --fix src"
   },
   "dependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "mpvue": "^2.0.0",
     "vuex": "^3.0.1"
   },

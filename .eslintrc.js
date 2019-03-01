@@ -12,19 +12,26 @@ module.exports = {
     es6: true
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-  extends: 'standard',
+  // 启用eslint推荐的语法
+  extends: 'eslint:recommended',
   // required to lint *.vue files
   plugins: [
     'html'
   ],
   // add your custom rules here
   'rules': {
+    // 在语句结尾使用分号
+    'semi-style': ['warn', 'last'],
+    'semi': ['warn', 'always'],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // 允许在调试环境中使用下面的语句
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-constant-condition': process.env.NODE_ENV === 'production' ? 2 : 0
   },
   globals: {
     App: true,
